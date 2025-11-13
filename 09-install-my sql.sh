@@ -15,6 +15,7 @@ then
  if [ $? -ne 0 ]
  then 
     echo "ERROR:: Installation fail
+    exit 1
   else
     echo "installtaion done "
   fi    
