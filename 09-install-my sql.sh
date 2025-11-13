@@ -18,6 +18,8 @@ then
     exit 1
   else
     echo "installtaion done"
+  
+  fi
 
 
     yum install git  -y
