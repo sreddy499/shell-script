@@ -7,3 +7,5 @@ then
     echo "Erorr:: Please run the script"
 
  fi   
+
+ yum install mysql -y
