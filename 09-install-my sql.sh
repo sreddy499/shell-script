@@ -18,4 +18,15 @@ then
     exit 1
   else
     echo "installtaion done"
+
+
+    yum install git  -y
+
+
+ if [ $? -ne 0 ]
+ then 
+    echo "ERROR:: Installation of git  faild"
+    exit 1
+  else
+    echo "installtaion done git "
   fi    
