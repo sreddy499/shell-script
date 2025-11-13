@@ -14,8 +14,8 @@ then
 
  if [ $? -ne 0 ]
  then 
-    echo "ERROR:: Installation fail
+    echo "ERROR:: Installation faild"
     exit 1
   else
-    echo "installtaion done "
+    echo "installtaion done"
   fi    
