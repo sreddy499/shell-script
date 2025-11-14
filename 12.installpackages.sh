@@ -10,8 +10,7 @@ VALIDATE(){
         echo -e "$2...$R Failed $N"
     else
         echoo -e "$2...$G Success $N"
-    fi    
-    
+    fi       
 }
 
 if [ $ID -ne O ]
@@ -27,5 +26,8 @@ do
    if [ $? -ne 0 ]
    then 
       yum install $package -y
-      VALIDATE $? "insatallation of $package"
+      VALIDATE $? "installation of $package"
+    else
+       echo -e "$package is already installed"
+    fi     
  done   
