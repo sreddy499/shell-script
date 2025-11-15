@@ -18,7 +18,6 @@ VALIDATE(){
 if [ $ID -ne O ]
 then 
    echo -e  "$R error:: Please run the script with root acess $N"
-   exit 1
  else 
    echo "you are root user "  
 fi
