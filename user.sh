@@ -43,10 +43,9 @@ VALIDATE $? "Validate npm"
 cp /home/centos/user.service  /etc/systemd/system/user.service
 systemctl daemon-reload
 VALIDATE $? "deamon-reload"
-#ignore
-systemctl enable catalogue
-VALIDATE $? "Enable catalogue"
-systemctl start catalogue
-VALIDATE $? "start catalogue"
+systemctl enable user
+VALIDATE $? "Enable user"
+systemctl start user
+VALIDATE $? "start user"
 
 
