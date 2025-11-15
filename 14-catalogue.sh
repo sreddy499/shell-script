@@ -37,7 +37,7 @@ unzip /tmp/catalogue.zip
 VALIDATE $? "Validate unzip"
 npm install 
 VALIDATE $? "Validate npm"
-cp /home/centos/shell-script/catalogue.service  /etc/systemd/system/catalogue.service
+cp /home/centos/catalogue.service /etc/systemd/system/catalogue.service
 VALIDATE $? "Validate Copying"
 systemctl daemon-reload
 VALIDATE $? "deamon-reload"
@@ -45,7 +45,7 @@ systemctl enable catalogue
 VALIDATE $? "Enable catalogue"
 systemctl start catalogue
 VALIDATE $? "start catalogue"
-cp /home/centos/shell-script/mongo.repo /etc/yum.repos.d/mongo.repo
+cp /home/centos/mongo.repo /etc/yum.repos.d/mongo.repo
 VALIDATE $? "Copying "
 dnf install mongodb-org-shell -y
 mongo --host $MONGODB_HOST </app/schema/catalogue.js
