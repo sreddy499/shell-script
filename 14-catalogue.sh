@@ -35,7 +35,6 @@ VALIDATE $? "Validate downlaoding catalogue"
 cd /app 
 unzip /tmp/catalogue.zip
 VALIDATE $? "Validate unzip"
-cd /app
 npm install 
 VALIDATE $? "Validate npm"
 cp /home/centos/shell-script/catalogue.service  /etc/systemd/system/catalogue.service

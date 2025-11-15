@@ -31,3 +31,22 @@ useradd roboshop
 VALIDATE $? "Validate roboshop user create"
 mkdir /app
 VALIDATE $? "Validate app directory"
+curl -L -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip
+curl -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip
+VALIDATE $? "Validate downlaoding catalogue"
+cd /app 
+unzip /tmp/catalogue.zip
+VALIDATE $? "Validate unzip"
+cd /app
+npm install 
+VALIDATE $? "Validate npm"
+cp /home/centos/shell-script/user .service  /etc/systemd/system/user.service
+systemctl daemon-reload
+VALIDATE $? "deamon-reload"
+#ignore
+systemctl enable catalogue
+VALIDATE $? "Enable catalogue"
+systemctl start catalogue
+VALIDATE $? "start catalogue"
+
+
