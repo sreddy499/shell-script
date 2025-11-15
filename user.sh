@@ -35,7 +35,7 @@ curl -L -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip
 curl -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip
 VALIDATE $? "Validate downlaoding catalogue"
 cd /app 
-unzip /tmp/catalogue.zip
+unzip /tmp/user.zip
 VALIDATE $? "Validate unzip"
 cd /app
 npm install 
