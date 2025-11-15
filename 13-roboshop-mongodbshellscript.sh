@@ -28,7 +28,7 @@ sudo yum install -y mongodb-org &>> $LOGFILE
 VALIDATE $? "Installing Mongodb"
 systemctl enable mongod
 systemctl start mongod
-sed -i 's/127.0.0.1/0.0.0.0/g' /etc/yum.repos.d/mongod.conf &>> $LOGFILE
+sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf &>> $LOGFILE
 VALIDATE $? "Remote access to MongoDB"
 systemctl restart mongod &>> $LOGFILE
 VALIDATE $? "Restarting Mongodb"
