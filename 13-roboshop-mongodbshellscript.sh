@@ -24,7 +24,7 @@ then
 fi
 cp mongo.repo /etc/yum.repos.d/mongo.repo &>>$LOGFILE
 VALIDATE $? "Copied Mongodb Repo"
-apt-get install mongodb-org -y &>> $LOGFILE
+sudo yum install -y mongodb-org &>> $LOGFILE
 VALIDATE $? "Installing Mongodb"
 systemctl enable mongod
 systemctl start mongod
