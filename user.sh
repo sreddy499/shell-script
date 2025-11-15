@@ -40,7 +40,7 @@ VALIDATE $? "Validate unzip"
 cd /app
 npm install 
 VALIDATE $? "Validate npm"
-cp /home/centos/user .service  /etc/systemd/system/user.service
+cp /home/centos/user.service  /etc/systemd/system/user.service
 systemctl daemon-reload
 VALIDATE $? "deamon-reload"
 #ignore
