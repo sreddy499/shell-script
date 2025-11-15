@@ -40,7 +40,8 @@ cd /app
 npm install 
 VALIDATE $? "Validate npm"
 #use absolute path
-cp /home/centos/SHELL-SCRIPT/catalogue.service /etc/systemd/system/catalogue.service
+cd /home/centos/shell-script/
+cp catalogue.service /etc/systemd/system/catalogue.service
 VALIDATE $? "Validate Copying"
 systemctl daemon-reload
 VALIDATE $? "deamon-reload"
