@@ -43,6 +43,7 @@ cp /home/centos/shell-script/catalogue.service  /etc/systemd/system/catalogue.se
 VALIDATE $? "Validate Copying"
 systemctl daemon-reload
 VALIDATE $? "deamon-reload"
+#ignore
 systemctl enable catalogue
 VALIDATE $? "Enable catalogue"
 systemctl start catalogue
