@@ -48,7 +48,7 @@ systemctl enable catalogue
 VALIDATE $? "Enable catalogue"
 systemctl start catalogue
 VALIDATE $? "start catalogue"
-cp /home/centos/SHELL-SCRIPT/catalogue.service  /etc/yum.repos.d/mongo.repo
+cp /home/centos/shell-script/catalogue.service  /etc/yum.repos.d/mongo.repo
 VALIDATE $? "Copying "
 dnf install mongodb-org-shell -y
 mongo --host $MONGODB_HOST </app/schema/catalogue.js
