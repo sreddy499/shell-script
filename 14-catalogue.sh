@@ -10,6 +10,7 @@ VALIDATE(){
    if [ $1 -ne 0 ]
    then
         echo -e "$2...$R Failed $N"
+        exit 1
     else
         echo -e "$2...$G Success $N"
     fi       
@@ -48,7 +49,7 @@ systemctl enable catalogue
 VALIDATE $? "Enable catalogue"
 systemctl start catalogue
 VALIDATE $? "start catalogue"
-cp /home/centos/shell-script/catalogue.service  /etc/yum.repos.d/mongo.repo
+cp /home/centos/shell-script/mongo.repo /etc/yum.repos.d/mongo.repo
 VALIDATE $? "Copying "
 dnf install mongodb-org-shell -y
 mongo --host $MONGODB_HOST </app/schema/catalogue.js
