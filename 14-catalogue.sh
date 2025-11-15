@@ -38,12 +38,10 @@ VALIDATE $? "Validate unzip"
 cd /app
 npm install 
 VALIDATE $? "Validate npm"
-#use absolute path
 cp /home/centos/shell-script/catalogue.service  /etc/systemd/system/catalogue.service
 VALIDATE $? "Validate Copying"
 systemctl daemon-reload
 VALIDATE $? "deamon-reload"
-#ignore
 systemctl enable catalogue
 VALIDATE $? "Enable catalogue"
 systemctl start catalogue
