@@ -34,5 +34,5 @@ VALIDATE $? "downloading application"
 cd /usr/share/nginx/html
 VALIDATE $? "moving to nginx"
 unzip -o /tmp/web.zip
-cp /home/centos/shell-script/roboshop.conf /etc/nginx/default.d/roboshop.conf 
+cp /home/centos/shell-script/roboshopconf /etc/nginx/default.d/roboshop.conf 
 systemctl restart nginx 
