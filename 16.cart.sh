@@ -5,7 +5,7 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 MONGODB_HOST=mongodb.daws7s.shop
-TIMESTMAP=$(date + %f-%H-%M-%S)
+TIMESTMAP=$(date +%f-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 VALIDATE(){
    if [ $1 -ne 0 ]
