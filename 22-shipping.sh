@@ -38,3 +38,4 @@ systemctl enable shipping
 systemctl start shipping
 dnf install mysql -y
 mysql -h mysql.daws7s.shop -uroot -pRoboShop@1 < /app/schema/shipping.sql 
+systemctl restart shipping
