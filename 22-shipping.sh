@@ -33,7 +33,7 @@ cd /app
 unzip /tmp/shipping.zip
 mvn clean package
 mv target/shipping-1.0.jar shipping.jar
-cp home/centos/shell-script/shipping.service /etc/systemd/system/shipping.service
+cp /home/centos/shell-script/shipping.service /etc/systemd/system/shipping.service
 VALIDATE $? "Copying shipping service"
 systemctl daemon-reload
 systemctl enable shipping 
