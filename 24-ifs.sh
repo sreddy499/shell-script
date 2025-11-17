@@ -15,4 +15,4 @@ while IFS=":" read -r username
 do
    echo "username: $username
 
-done < $file 
+done < "$file"
