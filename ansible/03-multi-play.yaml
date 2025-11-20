@@ -1,0 +1,15 @@
+#playbook is a list of arrays
+- name: PLAY-1
+  hosts: localhost
+  tasks:
+   - name: PLAY-1 and TASK-1
+     ansible.builtin.debug:
+       msg: "Hello form PLAY-1 and TASK-1"
+
+
+- name: PLAY-2
+  hosts: localhost
+  tasks:
+     - name: PLAY-2 and TASK-2
+       ansible.builtin.debug:
+         msg: "Hello from PLAY-2 and TASK-2"  

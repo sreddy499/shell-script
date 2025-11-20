@@ -1,13 +1,14 @@
 [web]
-192.24.2.2
+54.196.249.211
 
 [catalogue]
+2.2.2.2
 
 
 [cart]
 
 
-[roboshop:chileren]
+[roboshop:children]
 web
 cart
 catalogue
